@@ -178,6 +178,50 @@
     color: var(--white);
 }
 
+/* Mission Content Layout */
+.mission-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.mission-text {
+    flex: 1;
+}
+
+.mission-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.mission-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+}
+
+/* Responsive Mission Section */
+@media (max-width: 992px) {
+    .mission-content {
+        flex-direction: column;
+    }
+
+    .mission-image {
+        width: 100%;
+        max-width: 600px;
+        margin: 2rem auto 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .mission-image {
+        max-width: 100%;
+    }
+}
+
 /* Why Choose Us */
 .why-choose-us {
     background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
