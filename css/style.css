@@ -5,6 +5,20 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-blue: #1461e0;
+    --primary-purple: #9e00f9;
+    --primary-pink: #fc0065;
+    --gradient-main: linear-gradient(45deg, #1461e0, #9e00f9, #fc0065);
+    --gradient-hover: linear-gradient(45deg, #fc0065, #9e00f9, #1461e0);
+    --text-dark: #212121;
+    --text-light: #666;
+    --white: #ffffff;
+    --shadow-sm: 0 4px 6px rgba(158, 0, 249, 0.1);
+    --shadow-md: 0 10px 30px rgba(158, 0, 249, 0.15);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -133,21 +147,24 @@ header nav ul li a.active {
 }
 
 .slide-content .btn {
-    background: #ff5722;
-    color: #fff;
+    background: var(--gradient-main);
+    color: var(--white);
     padding: 0.8rem 2rem;
     text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    border-radius: 50px;
+    transition: var(--transition);
     border: 2px solid transparent;
     font-weight: 600;
     display: inline-block;
+    box-shadow: var(--shadow-sm);
 }
 
 .slide-content .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
     background: transparent;
-    border-color: #fff;
-    transform: translateY(-2px);
+    border-color: var(--white);
+    color: var(--white);
 }
 
 /* Slider Controls */
@@ -225,18 +242,37 @@ header nav ul li a.active {
     gap: 1rem;
 }
 
+.stat-item i {
+    font-size: 2.5rem;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.stat-item:hover i {
+    transform: scale(1.1);
+    background: var(--gradient-hover);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .stat-item {
     flex: 1;
     text-align: center;
-    background: #f4f4f4;
-    padding: 1rem;
-    border-radius: 5px;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid rgba(158, 0, 249, 0.1);
 }
 
-.stat-item i {
-    font-size: 2rem;
-    color: #ff5722;
-    margin-bottom: 0.5rem;
+.stat-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
 }
 
 /* Add missing styles for services-preview section */
