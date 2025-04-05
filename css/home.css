@@ -539,8 +539,31 @@
     }
 }
 
-/* Responsive Design */
+/* Responsive Design Enhancement */
+@media (max-width: 1200px) {
+    .intro-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 992px) {
+    .slide-content h1 {
+        font-size: 3rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     .intro-content {
         grid-template-columns: 1fr;
     }
@@ -548,15 +571,28 @@
     .intro-stats {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .transform-cta .cta-content h2 {
+        font-size: 3rem;
+    }
 }
 
 @media (max-width: 768px) {
+    .hero {
+        height: 80vh;
+    }
+    
+    .slide-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
     .slide-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     
     .slide-content h3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     
     .section-header h2 {
@@ -567,8 +603,116 @@
         grid-template-columns: 1fr;
     }
     
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .slider-controls button {
         width: 40px;
         height: 40px;
+    }
+    
+    .transform-cta .cta-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    .transform-cta .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .transform-cta .btn {
+        width: 100%;
+    }
+
+    .stat-item {
+        padding: 1.5rem;
+    }
+    
+    .stat-item h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .slide-content h3 {
+        font-size: 1rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .slider-controls {
+        padding: 0 1rem;
+    }
+    
+    .slider-controls button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .intro, 
+    .services-preview,
+    .areas-served,
+    .transform-cta {
+        padding: 4rem 0;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .slider-controls button {
+        background: var(--gradient-main);
+        opacity: 0.8;
+    }
+    
+    .service-card:hover,
+    .stat-item:hover,
+    .area-column:hover {
+        transform: none;
+    }
+}
+
+/* High Resolution Screens */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .slide-content {
+        max-width: 1000px;
+    }
+    
+    .slide-content h1 {
+        font-size: 4rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .hero,
+    .slider-controls,
+    .transform-cta,
+    .whatsapp-float {
+        display: none;
+    }
+    
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
     }
 }
