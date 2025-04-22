@@ -1,10 +1,3 @@
-/**
- * POP & False Ceiling Experts
- * Main JavaScript File
- * Author: Claude AI
- * Version: 1.1 (Fixed Errors)
- */
-
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize AOS (Animate on Scroll)
     if (typeof AOS !== 'undefined') {
